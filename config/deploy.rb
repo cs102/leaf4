@@ -1,9 +1,9 @@
 require "bundler/capistrano"
 require 'hipchat/capistrano'
 
-#set :hipchat_token, "jGfVLjSg2hLBD0szNhdEk3iGGF8rvKPsxdPiC3wQ"
-#set :hipchat_room_name, "leaf4"
-#set :hipchat_announce, true # notify users?
+set :hipchat_token, "jGfVLjSg2hLBD0szNhdEk3iGGF8rvKPsxdPiC3wQ"
+set :hipchat_room_name, "leaf4"
+set :hipchat_announce, true # notify users?
 
 ##comments
 server "littlebookmarks.com", :web, :app, :db, primary: true
