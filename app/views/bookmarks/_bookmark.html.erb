@@ -1,0 +1,18 @@
+<tr>
+	<td>
+		<%= link_to truncate(bookmark.link, :length => 80), bookmark.link,:target => "_blank"  %>
+	</td>
+
+	<td>
+		<% if current_user?(bookmark.user) %>
+		<%= link_to "", bookmark, method: :delete,
+        	         class: "delete_icon",
+                                 data: { confirm: "You sure?" },
+                                 title: bookmark.link %>
+		<% end %>
+	</td>
+
+	<td>
+		<%= time_ago_in_words(bookmark.created_at)%>
+	</td>
+</tr>

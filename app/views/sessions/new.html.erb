@@ -1,0 +1,24 @@
+<% provide(:title, "Login") %>
+
+<div class ="pure-form pure-form-aligned">
+<%= form_for(:sessions, url: sessions_path) do |f| %>
+ 
+	<div class="field">
+     <%= f.label :email %><br>
+     <%= f.text_field :email %>
+    </div>
+
+    <div class="field">
+        <%= f.label :password %><br>
+        <%= f.password_field :password %>
+    </div>
+
+
+	 <%= f.submit "Login", class: "login button"%>
+</div>
+
+ <% end %>
+ <br/>
+ <p> Don't have an account yet ? </p>
+ <br/>
+<%= link_to "Register now", register_path, class: "green" %>

@@ -1,0 +1,15 @@
+<% provide(:title, @user.name) %>
+<h1>
+  <%= gravatar_for @user %>
+  <%= @user.name %>
+</h1>
+
+<% if @user.bookmarks.any? %>
+	<p>Bookmarks (<%= @user.bookmarks.count %>)</p>
+	
+		<table class="table table-striped content">
+		<%= render @bookmarks %>
+	</div>
+	
+	<%= will_paginate @bookmarks %>
+<% end %>

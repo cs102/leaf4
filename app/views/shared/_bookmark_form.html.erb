@@ -1,0 +1,10 @@
+<%= form_for(@bookmark) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="pure-form pure-form-aligned">
+    <%= f.text_area :link, placeholder: "Paste complete url", :rows=>1, :cols=>60 %>
+    <%#s= f.text_area :url, id: "bookmarkText", :rows=>1, :cols=>40, placeholder: "add new bookmark" %>
+  </div>
+  <br/>
+  <%= f.submit "+ Save bookmark", class: "button primary" %>
+<% end %>
+<br/>

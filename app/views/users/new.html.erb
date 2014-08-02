@@ -1,0 +1,47 @@
+<% provide(:title, 'Register') %>
+
+<div class="clear"></div>
+
+<div class = "left feature">
+  <h1>Social and Private Bookmarks</h1>
+  <br/>
+  <p>Fast and simple</p>
+  <p>No ads, no bs</p>
+  <p>Should you switch from other apps? </p>
+  <p>Take a tour</p>
+
+</div>
+<% if signed_in? %>
+ <p> Playa </p>
+
+<% else %>
+  <div class = "right register pure-form pure-form-aligned">
+
+    <%= form_for(@user) do |f| %>
+      <%#= render 'shared/error_messages', object: f.object %>
+      <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+        <span class="help-inline"><%= @user.errors[:name] %></span>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %><br>
+        <%= f.text_field :email %>
+        <span class="help-inline"><%= @user.errors[:email] %></span>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %><br> 
+        <%= f.password_field :password %>
+        <span class="help-inline"><%= @user.errors[:password] %></span>
+      </div>
+
+
+      <%= f.submit "Create my account", class: "create_account button" %>
+    <% end %>
+</div>
+
+<div class="clear"></div>
+
+<% end %>

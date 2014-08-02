@@ -1,0 +1,24 @@
+<%#= feed_item.id %>
+	<tr>
+		<td>
+			
+			<%= link_to truncate(feed_item.link, :length => 80), feed_item.link,:target => "_blank"  %>
+		</td>
+		
+		<td>
+			<% if current_user?(feed_item.user) %>
+    		<%= link_to "", feed_item, method: :delete,
+            	         class: "delete_icon",
+                                     data: { confirm: "You sure?" },
+                                     title: feed_item.link %>
+			<% end %>
+		</td>
+
+		<td>
+			<%= time_ago_in_words(feed_item.created_at)%>
+		</td>
+	</tr>
+
+		
+
+	
