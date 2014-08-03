@@ -1,5 +1,8 @@
 <% provide(:title, 'Edit user') %>
-<h1>Update your profile</h1>
+<h2>Update your profile</h2>
+
+<p class ="todo">to do: Create simpler form for user update, add bio field, add picture upload to profile</p>
+
 <div class = "pure-form pure-form-aligned">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages',object: f.object %>

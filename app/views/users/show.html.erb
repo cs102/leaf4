@@ -3,6 +3,10 @@
   <%= gravatar_for @user %>
   <%= @user.name %>
 </h1>
+  
+  <p class= "todo">To do : Add Follow and un Follow / polymorphic association </p>
+  <hr>
+</h1>
 
 <% if @user.bookmarks.any? %>
 	<p>Bookmarks (<%= @user.bookmarks.count %>)</p>
