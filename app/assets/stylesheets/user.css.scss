@@ -75,7 +75,7 @@ table a:active {
 .created_url {float: left; width: 120px;margin-left: 50px; }
 
 .delete_icon {
-  background-image:url(delete.png);
+  background-image: asset-url("delete.png");
   background-repeat: no-repeat;
   padding-left:20px;
   padding-top: 1px;
@@ -84,7 +84,7 @@ table a:active {
 }
 
 .delete_icon:hover {
-  background-image:url(delete_red.png);
+  background-image: asset-url("delete_red.png");
   background-repeat: no-repeat;
   padding-left:20px;
   padding-top: 1px;
@@ -95,7 +95,7 @@ table a:active {
 .header {
   width:100%;margin-top:0px;margin-bottom:0px;
   height: 12px;
-  background-image:url(blue_bg.png);
+  background-image: asset-url("blue_bg.png");
   padding-bottom:45px;
   margin-bottom:10px;
   border-top: 4px solid #40403f;
