@@ -3,66 +3,110 @@
 <head>
   <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  body {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
-
-  div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
-
-  div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-
-  h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
-
-  div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-  </style>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.5.0/base-min.css&pure/0.5.0/grids-min.css&pure/0.5.0/forms-min.css">
 </head>
 
+  
+  <style>
+    .header {
+  width:100%;margin-top:0px;margin-bottom:0px;
+  height: 12px;
+  background-image: url("blue_bg.png");
+  padding-bottom:45px;
+  margin-bottom:10px;
+  border-top: 4px solid #40403f;
+  /* color logo #d5dde6*/
+}
+
+.beta{
+  background-color: #b94a48;
+  padding: 2px 4px 3px;
+  font-size: 11.049999999999999px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.width {
+  width:980px; margin: 0 auto;
+}
+
+.logo { 
+  font-size: 36px;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  font-weight: bold;
+}
+.logo-color a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.logo-color a:link {
+  text-decoration: none;
+  padding: 2px 5px;  
+}
+
+.logo-color a:visited {
+  color: white;
+  padding: 2px 5px;
+  text-decoration: none;
+}
+
+.logo-color a:hover {
+  color:#F2DEE7;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  padding: 2px 5px;
+  text-decoration: none;
+ 
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.todo {
+padding: 8px 35px 8px 14px;
+  background-color: #FCFC76;
+  border: 1px solid #F2F241;
+  border-radius:5px;
+  font-weight: bold;
+}
+
+  }
+  </style>
+
+
 <body>
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <h2>404</h2>
-      <p>You may have mistyped the address or the page may have moved.</p>
+<div class = "header">
+  <div class ="width">
+      <div class ="left">
+       <span class="beta">Beta</span>
+
+       <br/>
+
+      <span class="logo-color">
+        <a class="logo" href="/">little bookmarks</a>
+      </span>
+
     </div>
-    <p>Better luck next time Bob!.</p>
-  </div>
+</div>
+<div class="clear"></div>
+
+<div class = "width content">
+
+
+<p class= "todo">404: that page is gone Bob</p>
+<img src ="404.png" alt = "404 image">
+
+
+<br/>
+</div>
+
 </body>
 </html>
