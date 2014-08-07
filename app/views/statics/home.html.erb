@@ -1,4 +1,10 @@
 <% if signed_in? %>
+<% if @feed_items.count <= 0 %>
+<p class = "info todo">Saving bookmarks its's easy as Ctrl + C and Ctrl + V</p>
+<%elsif @feed_items.count >= 5 %>
+<% else %>
+<p class = "info todo">you are getting good!... [ message will self destruct after 5 bookmarks ]</p>
+<% end %>
   <%#= render 'shared/user_info' %>
   <%= render 'shared/bookmark_form' %>
   <%= render 'shared/feed' %>

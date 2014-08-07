@@ -1,19 +1,28 @@
+ <p class= "todo">To do : Add Follow and un Follow / polymorphic association </p>
 <% provide(:title, @user.name) %>
+<div class = "profile left">
+<br/>
 <h1>
   <%= gravatar_for @user %>
-  <%= @user.name %>
-</h1>
   
-  <p class= "todo">To do : Add Follow and un Follow / polymorphic association </p>
-  <hr>
 </h1>
+ <p><%= @user.name.capitalize %></p>
+ <p>Joined <bold><%= @user.created_at.strftime("%B %d, %Y ") %></bold></p> 
+  
+<%= link_to '+ Follow ', '#', :class => ' button green' %>
+
+</div>
+
+<div class = "right">
 
 <% if @user.bookmarks.any? %>
-	<p>Bookmarks (<%= @user.bookmarks.count %>)</p>
-	
+	<!--
+	<p>Bookmarks (<%#= @user.bookmarks.count %>)</p>
+	-->
 		<table class="table table-striped content">
 		<%= render @bookmarks %>
 	</div>
 	
 	<%= will_paginate @bookmarks %>
 <% end %>
+</div>

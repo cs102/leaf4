@@ -4,7 +4,8 @@ class SessionsController < ApplicationController
 	    if user && user.authenticate(params[:sessions][:password])
 	      sign_in user
 	      #redirect_back_or user
-	      redirect_to user
+	      #redirect_to user
+	      redirect_to statics_home_path
 	      # Sign the user in and redirect to the user's show page.
 	    else
 	      flash.now[:error] = 'Invalid email or password' # Not quite right!

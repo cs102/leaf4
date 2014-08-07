@@ -26,7 +26,8 @@ class UsersController < ApplicationController
   	if @user.save
       sign_in @user
       flash[:success] = "Welcome to Little Bookmarks"
-  		redirect_to @user
+  		redirect_to statics_home_path
+      #redirect_to @user
   	else
   		render 'new'
   	end
