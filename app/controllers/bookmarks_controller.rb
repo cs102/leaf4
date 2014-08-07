@@ -21,7 +21,7 @@ class BookmarksController < ApplicationController
 
   def destroy
     @bookmark.destroy!
-    flash[:success] = "Bookmark deleted"
+    #flash[:success] = "Bookmark deleted"
     redirect_to statics_home_path
   end
 
