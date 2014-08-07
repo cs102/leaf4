@@ -106,6 +106,38 @@ table a:active {
   /* color logo #d5dde6*/
 }
 
+.menu {
+  width: 360px;
+  font-size: 16px;
+}
+
+.menu a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.menu a:link {
+  text-decoration: none;
+  padding: 2px 5px;  
+  color: white;
+}
+
+.menu a:visited {
+  color: white;
+  padding: 2px 5px;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color:#F2DEE7;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  padding: 2px 5px;
+  text-decoration: none;
+ 
+}
+
 .beta{
   background-color: #b94a48;
   padding: 2px 4px 3px;
