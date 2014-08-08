@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   match '/home', to: 'statics#home', via: 'get'
+  match '/kid', to: 'statics#help', via: 'get'
   get 'statics/home'
 
-  get 'statics/help'
+  #get 'statics/help'
 
   #get 'user/new'
   resources :users

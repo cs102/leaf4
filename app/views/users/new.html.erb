@@ -1,19 +1,21 @@
-<% provide(:title, 'Register') %>
+<% provide(:title, 'Little Bookmarks welcomes you, Register') %>
 
 <div class="clear"></div>
 <div class = "left feature">
   <h1>Social and Private Bookmarks</h1>
   <br/>
-  <p>Fast and simple</p>
-  <p>No ads, no bs</p>
+  <p>Access your bookmarks from anywhere from <%= link_to 'anything', {:controller => 'statics', :action => 'help'}, :alt => 'I kid of course you need a pc, iphone, table, etc'%>.</p>
+  <p>Fast and simple.</p>
+  <p>No ads, no bs!</p>
+
    <hr/>
  <p><strong>thanks</strong> for trying <%= link_to image_tag('baby-boy-icon.png'), root_path %> <strong>little bookmarks</strong>
  </p>
  <p>Currently the site it's on a Beta stage, what this means is. I'm adding and removing features, making a few experiments to make the site better.</p>
  <p>I'm shipping new features or fixing bugs daily.</p>
- <p><em>Note:</em> Once you save a bookmark we will no delete it unless you do.</p>
+ <p><em>Note:</em> your bookmarks will not be <u>delete</u> it unless you choose.</p>
  <hr> 
- <p> Last Commit: <strong>Thu 8/7/2014 9:20pm</strong></p> 
+ <p> Last Commit: <strong>Fri 8/8/2014 3:52pm</strong></p> 
 
 </div>
 <% if signed_in? %>
