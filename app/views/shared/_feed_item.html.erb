@@ -1,8 +1,14 @@
 <%#= feed_item.id %>
 	<tr>
 		<td>
+			<% if feed_item.title.blank? %>
+			   <%= link_to truncate(feed_item.link, :length => 80), feed_item.link,:target => "_blank"  %>
+			   
+			<% else %>
+			<%= link_to truncate(feed_item.title, :length => 80), feed_item.link,:target => "_blank"  %>
+			    
+			<% end %>
 			
-			<%= link_to truncate(feed_item.link, :length => 80), feed_item.link,:target => "_blank"  %>
 		</td>
 		
 		<td>

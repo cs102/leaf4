@@ -4,12 +4,11 @@ class BookmarksController < ApplicationController
 
 
   def create
+    require 'pismo'
+    doc = Pismo::Document.new(bookmark_params[:link])
     @bookmark = current_user.bookmarks.build(bookmark_params)
-    #require 'pismo'
-    #url = bookmark_params(:link)
-    #doc = Pismo::Document.new(bookmark.url)
-    #@title = bookmark.title
-
+    @bookmark.title = doc.title.to_s
+   
     if @bookmark.save
       #flash[:success] = "Bookmark save"
       redirect_to statics_home_path
@@ -28,16 +27,8 @@ class BookmarksController < ApplicationController
   private
 
 	def bookmark_params
-    #url = bookmark_params(:link)
-    #doc = Pismo::Document.new(bookmark.link)
-	  params.require(:bookmark).permit(:link, :title)
+    params.require(:bookmark).permit(:link, :title)
 	end
-
-  def nokogiri
-    require 'nokogiri'
-    url = bookmark_params(:link)
-    @doc = Nokogiri::HTML(open(url))
-  end
 
   def correct_user
     @bookmark = current_user.bookmarks.find_by(id: params[:id])
