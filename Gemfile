@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'pismo'
 gem 'nokogiri'
-gem 'newrelic_rpm'
+#gem 'newrelic_rpm'
 
 #gem 'hipchat'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
