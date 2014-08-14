@@ -1,6 +1,17 @@
 <tr>
 	<td>
-		<%= link_to truncate(bookmark.link, :length => 80), bookmark.link,:target => "_blank"  %>
+		<% if bookmark.title.blank? %>
+			  
+			   
+			   <%= link_to truncate(bookmark.link, :length => 80), bookmark.link,:target => "_blank"  %>
+			   
+			<% else %>
+
+			<%= link_to truncate(bookmark.title, :length => 80), bookmark.link,:target => "_blank"  %>
+			    
+			<% end %>
+
+		<%#= link_to truncate(bookmark.link, :length => 80), bookmark.link,:target => "_blank"  %>
 	</td>
 
 	<td>
