@@ -1,16 +1,10 @@
 <tr>
 	<td>
-		<% if bookmark.title.blank? %>
-			  
-			   
-			   <%= link_to truncate(bookmark.link, :length => 80), bookmark.link,:target => "_blank"  %>
-			   
+		<% if bookmark.title.blank? %> 
+			<%= link_to truncate(bookmark.link, :length => 80), bookmark.link,:target => "_blank"  %>   
 			<% else %>
-
 			<%= link_to truncate(bookmark.title, :length => 80), bookmark.link,:target => "_blank"  %>
-			    
 			<% end %>
-
 		<%#= link_to truncate(bookmark.link, :length => 80), bookmark.link,:target => "_blank"  %>
 	</td>
 
@@ -18,7 +12,7 @@
 		<% if current_user?(bookmark.user) %>
 		<%= link_to "", bookmark, method: :delete,
         	         class: "delete_icon",
-                                 data: { confirm: "You sure?" },
+                                 data: { confirm: "Are you sure?" },
                                  title: bookmark.link %>
 		<% end %>
 	</td>
