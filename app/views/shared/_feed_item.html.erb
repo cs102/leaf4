@@ -18,7 +18,7 @@
 			<% if current_user?(feed_item.user) %>
     		<%= link_to "", feed_item, method: :delete,
             	         class: "delete_icon",
-                                     data: { confirm: "You sure?" },
+                                     data: { confirm: "Are you sure ?" },
                                      title: feed_item.link %>
 			<% end %>
 		</td>
