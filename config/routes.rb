@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
   match '/home', to: 'statics#home', via: 'get'
   match '/kid', to: 'statics#help', via: 'get'
   get 'statics/home'
 
-  #get 'statics/help'
-
-  #get 'user/new'
-  resources :users
   resources :sessions,  only: [:new, :create, :destroy]
   resources :bookmarks, only: [:create, :destroy]
-
+  resources :relationships, only: [:create, :destroy]
+  
   match '/register', to: 'users#new', via: 'get'
   match '/login', to: 'sessions#new', via: 'get'
   match '/logout', to: 'sessions#destroy', via: 'delete'

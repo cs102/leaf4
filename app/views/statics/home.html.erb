@@ -8,8 +8,12 @@ Welcome to Little Bookmarks
 <p class = "info todo">you are getting good!... [ message will self destruct after 5 bookmarks ]</p>
 <% end %>
   <%#= render 'shared/user_info' %>
+  <%#= render 'shared/stats' %>
   <%= render 'shared/bookmark_form' %>
   <%= render 'shared/feed' %>
+  <section>
+        
+      </section>
 <% else %>
   <h1>Social and Private Bookmarks</h1>
   <%= link_to "Login", login_path, class: "button" %>

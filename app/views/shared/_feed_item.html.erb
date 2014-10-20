@@ -24,7 +24,12 @@
 		</td>
 
 		<td>
-			<%= time_ago_in_words(feed_item.created_at)%>
+			<% from_time = Time.now - 3.days - 14.minutes - 25.seconds %>
+			<%= 
+			time_ago_in_words(feed_item.created_at)
+			#time_ago_in_words(from_time)
+			#time_ago_in_words(feed_item.created_at) 
+			%>
 		</td>
 	</tr>
 

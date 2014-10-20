@@ -1,4 +1,4 @@
-<%# if @feed_items.any? %>
+<% if @feed_items.any? %>
 <table class="table table-striped content">
   
     <%= render partial: 'shared/feed_item', collection: @feed_items %>
@@ -7,4 +7,4 @@
 
 
   <%= will_paginate @feed_items %>
-<%# end %>
+<% end %>

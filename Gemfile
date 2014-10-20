@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 
 gem 'pismo'
 gem 'nokogiri'
+gem 'simple_form'
 #gem 'newrelic_rpm'
+#gem "rails_jq_validations", git: "git@github.com:jbmyid/rails_jq_validations.git"
 
 #gem 'hipchat'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -38,7 +40,7 @@ gem 'bcrypt-ruby', '3.1.2'
 gem 'unicorn', '4.6.3'
 
 group :development do
-    gem 'bullet'
+    #gem 'bullet'
     gem 'puma'
 end
 

@@ -1,14 +1,22 @@
 class User < ActiveRecord::Base
   before_save { self.email = email.downcase }
+  
   before_create :create_remember_token
   
   has_many :bookmarks, dependent: :destroy
   
+  has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+  
+  has_many :followed_users, through: :relationships, source: :followed
+  
+  has_many :reverse_relationships, foreign_key: "followed_id",
+                                   class_name: "Relationship",
+                                   dependent: :destroy
+  
+  has_many :followers, through: :reverse_relationships, source: :follower
+  
   self.per_page = 5
-
-	
-
-	validates :name, presence: true, length: { maximum: 30 }
+	validates :name, presence: true, length: { maximum: 30, message: "max length for name is 30 letters"}
 
 	EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     validates :email, 
@@ -19,10 +27,10 @@ class User < ActiveRecord::Base
     validates :password, length: { minimum: 4 }
     has_secure_password
 
-  def feed
-    Bookmark.where("user_id = ?", id)
-  end
-
+  #def feed
+  #  Bookmark.where("user_id = ?", id)
+  #end
+  
   def User.new_remember_token
     SecureRandom.urlsafe_base64
   end
@@ -30,6 +38,23 @@ class User < ActiveRecord::Base
   def User.digest(token)
     Digest::SHA1.hexdigest(token.to_s)
   end
+
+  def feed
+   Bookmark.from_users_followed_by(self)
+  end
+
+  def following?(other_user)
+    relationships.find_by(followed_id: other_user.id)
+  end
+
+  def follow!(other_user)
+    relationships.create!(followed_id: other_user.id)
+  end
+
+  def unfollow!(other_user)
+    relationships.find_by(followed_id: other_user.id).destroy
+  end
+
 
   private
 

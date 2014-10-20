@@ -21,3 +21,21 @@
 
 en:
   hello: "Hello world"
+
+en:
+  errors:
+    format: "%{message}"
+
+  activerecord:
+    errors:
+      models: 
+        user: 
+          attributes:
+            email:
+              blank: "Enter a valid email"
+            name:
+              blank: "Enter your name"
+            password:
+              blank: "Enter a password"
+            password_digest:
+              blank: "yoo bu bu"

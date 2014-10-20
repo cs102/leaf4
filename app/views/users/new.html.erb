@@ -14,7 +14,7 @@
  <p>I'm shipping new features or fixing bugs daily.</p>
  <p><em>Note:</em> your bookmarks will not be <u>deleted</u></p>
  <hr> 
- <p> Last Commit: <strong>Wed 8/20/2014 10:33pm</strong></p> 
+ <p> Last Commit: <strong>Wed 10/1/2014</strong></p> 
 
 
 </div>
@@ -29,23 +29,26 @@
   <div class = "right register pure-form pure-form-aligned">
 
     <%= form_for(@user) do |f| %>
-      <%#= render 'shared/error_messages', object: f.object %>
+      <%= render 'shared/error_messages', object: f.object %>
       <div class="field">
         <%= f.label :name %><br>
         <%= f.text_field :name %>
-        <span class="help-inline"><%= @user.errors[:name] %></span>
+        <br/>
+        <span class="help-inline"><%#= @user.errors[:name] %></span>
       </div>
 
       <div class="field">
         <%= f.label :email %><br>
         <%= f.text_field :email %>
-        <span class="help-inline"><%= @user.errors[:email] %></span>
+        <br/>
+        <span class="help-inline"><%#= @user.errors[:email] %></span>
       </div>
 
       <div class="field">
         <%= f.label :password %><br> 
         <%= f.password_field :password %>
-        <span class="help-inline"><%= @user.errors[:password] %></span>
+        <br/>
+        <span class="help-inline"><%#= @user.errors[:password] %></span>
       </div>
 
 
